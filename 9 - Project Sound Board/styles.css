@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(161, 100, 223);
+  font-family: "Poppins", sans-serif; 
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.btn {
+  background-color: rebeccapurple;
+  border-radius: 5px;
+  border: none;
+  color: #fff;
+  padding: 1.5rem 3rem;
+  margin: 1rem;
+  font-size: 1.2rem;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.volumeSlider {
+  position: absolute;
+  bottom: 50px;
+  right: 120px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.volumeSlider i {
+  font-size: 24px;
+  color: #fff;
+}
+
+.line {
+  width: 200px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: #000;
+  transition: width 0.3s ease;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.line.hidden {
+  width: 0;
+  overflow: hidden;
+}
+
+.circle {
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: -10px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.circle:hover {
+  transform: scale(1.1);
+}
+
+.circle i {
+  font-size: 14px;
+  color: #000;
+}
+
+/* When line is hidden, hide the circle too */
+.line.hidden .circle {
+  display: none;
+}
