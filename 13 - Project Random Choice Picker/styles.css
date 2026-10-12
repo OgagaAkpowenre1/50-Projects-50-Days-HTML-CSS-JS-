@@ -45,6 +45,7 @@ h3 {
   margin: 0 5px 10px 0;
   font-size: 14px;
   display: inline-block;
+  cursor: pointer;
 }
 
 .tag.highlight {
